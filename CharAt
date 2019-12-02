@@ -1,0 +1,34 @@
+Help I want to know how many characters the user input in this program code. 
+This code would require the user to input 5 names and know how many characters the name is. I tried using for loop for the counter to output the characters used. 
+
+    import java.util.Scanner;
+    public class ArrayDec2_Baban{
+    public static void main(String [] args){
+    int ctr=0;
+    String arrayname [] = new String [5];
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println("This program will require you to input 5 names where each name will be counted and the length of each name will be displayed.");
+    System.out.println("Please enter 5 names: ");
+    
+    for (int i=0;i<=4;i++){
+    arrayname [i] = in.nextLine();
+    }
+    System.out.println();
+    
+    for (int i=0;i<=4;i++){
+    System.out.println(arrayname[i]);
+    }
+    for(int i = 0 ; i < arrayname.length; i++){
+                    char [] name =  arrayname[i].toCharArray();
+                        for(int j = 0,count = 0 ; j <= name.length; j++){
+                           if (Character.isLetter(name[j])) {
+                                ctr++;
+                            }
+                            System.out.println(ctr);
+                        }
+    }
+    }
+    }
+
+I think I have something wrong in my condition or something. Please help. Thanks. 
